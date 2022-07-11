@@ -93,7 +93,7 @@ def test_workforce_assignment(vericol_session):
     vericol_session.goto(testenv + "workforce/assignment")
     vericol_session.wait_for_load_state('domcontentloaded')
 
-    assert vericol_session.wait_for_selector("id=cp_master_srt_project_assignment_identifier_lbl_sort_label")
+    assert vericol_session.wait_for_selector("id=wcp_master_srt_project_assignment_identifier_lbl_sort_label")
 
 def test_workforce_people(vericol_session):
     """Simple Workforce People Screen Rendered Test"""
