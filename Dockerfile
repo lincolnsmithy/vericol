@@ -4,7 +4,7 @@ FROM mcr.microsoft.com/playwright/python:v1.22.0-focal
 
 #WORKDIR /root
 
-RUN git clone https://github.com/lincolnsmithy/playwright.git
+RUN git clone https://github.com/lincolnsmithy/vericol.git
 RUN pip3 install pytest
 RUN pip3 install pytest-html
 RUN pip3 install pytest-repeat
