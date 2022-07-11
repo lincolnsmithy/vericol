@@ -15,6 +15,7 @@ ENV PW=vericol1
 ENV PYTEST_BASE_URL=https://demo.vericol.com/
 ENV chrometrace=YES
 
+
 #ENTRYPOINT ["pytest", "/vericol/vericobvt.py"]
 
 
