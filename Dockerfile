@@ -16,7 +16,7 @@ ENV PYTEST_BASE_URL=https://demo.vericol.com/
 ENV chrometrace=YES
 
 
-#ENTRYPOINT ["pytest", "/vericol/vericobvt.py"]
+ENTRYPOINT ["pytest", "/vericol/vericobvt.py"]
 
 
 #CMD vericol\pytest vericobvt.py --count=1 --html=tester2report.html
