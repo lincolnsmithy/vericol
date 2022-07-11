@@ -8,10 +8,11 @@ RUN git clone https://github.com/lincolnsmithy/playwright.git
 RUN pip3 install pytest
 RUN pip3 install pytest-html
 RUN pip3 install pytest-repeat
+RUN pip3 install Faker
 
-ENV USERNAME=autoapprovStable@gsa-automation.gov
+ENV USERNAME=john.raymond
 ENV PW=]Access98765#
-ENV PYTEST_BASE_URL=https:\\cge.concursolutions.com
+ENV PYTEST_BASE_URL=https:\\demo.vericol.com
 ENV chrometrace=YES
 
 #RUN echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' >> /etc/apt/sources.list

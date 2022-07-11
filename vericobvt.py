@@ -1,12 +1,12 @@
 #Sample automation for initial Post Deployment Verfication
-#Simple Login and visit a number of TAVS screens
-#Simple Travel View
 #Based on Python/Playwright framework with py-test
 
 from playwright.sync_api import sync_playwright
+from models.add_user import AddUser
 import pytest
 import os
 import json
+
 
 
 testenv = os.environ['PYTEST_BASE_URL'] #Global Test BASE URL - note:pytest_base_url not really working
@@ -77,7 +77,6 @@ def test_workforce_project(vericol_session):
     vericol_session.goto(testenv + "workforce/project")
     vericol_session.wait_for_load_state('domcontentloaded')
 
-
     assert vericol_session.wait_for_selector("id=cp_master_srt_project_manager_lbl_sort_label")
 
 def test_workforce_vacancy(vericol_session):
@@ -85,7 +84,6 @@ def test_workforce_vacancy(vericol_session):
 
     vericol_session.goto(testenv + "workforce/vacancy")
     vericol_session.wait_for_load_state('domcontentloaded')
-
 
     assert vericol_session.wait_for_selector("id=cp_master_srt_organization_internal_short_name_with_parent_lbl_sort_label")
 
@@ -95,7 +93,6 @@ def test_workforce_assignment(vericol_session):
     vericol_session.goto(testenv + "workforce/assignment")
     vericol_session.wait_for_load_state('domcontentloaded')
 
-
     assert vericol_session.wait_for_selector("id=cp_master_srt_project_assignment_identifier_lbl_sort_label")
 
 def test_workforce_people(vericol_session):
@@ -103,7 +100,6 @@ def test_workforce_people(vericol_session):
 
     vericol_session.goto(testenv + "workforce/people")
     vericol_session.wait_for_load_state('domcontentloaded')
-
 
     assert vericol_session.wait_for_selector("id=cp_master_srt_employee_id_lbl_sort_label")
 
@@ -113,22 +109,42 @@ def test_workforce_planner(vericol_session):
     vericol_session.goto(testenv + "workforce/planner/board")
     vericol_session.wait_for_load_state('domcontentloaded')
 
-
     assert vericol_session.wait_for_selector("id=cp_master_lbtn_reset")
+
 
 def test_add_person(vericol_session):
     """ Simple Add Person Test"""
 
-    vericol_session.goto(testenv + "workforce/people")
+    add_user = AddUser(vericol_session)
+    add_user.navigate()
+
+    add_user.add_new_user()
+
+
+
+def test_workforce_report(vericol_session):
+    """Simple Workforce Planner Screen Rendered Test"""
+
+    vericol_session.goto(testenv + "report")
     vericol_session.wait_for_load_state('domcontentloaded')
 
+    assert vericol_session.wait_for_selector("id=cp_master_lbl_action_title")
+
+def test_workforce_lead(vericol_session):
+    """Simple Workforce People Screen Rendered Test"""
+
+    vericol_session.goto(testenv + "lead")
+    vericol_session.wait_for_load_state('domcontentloaded')
+
+    assert vericol_session.wait_for_selector("id=cp_master_srt_lead_phase__code_value_lbl_sort_label")
+
+def test_workforce_people_list(vericol_session):
+    """Simple Workforce People Screen Rendered Test"""
+
+    vericol_session.goto(testenv + "workforce/people")
+    vericol_session.wait_for_load_state('domcontentloaded')
     assert vericol_session.wait_for_selector("id=cp_master_srt_employee_id_lbl_sort_label")
+    peeps = vericol_session.locator("tbody")
 
-    vericol_session.click("id=cp_master_lbtn_new")
-    assert vericol_session.wait_for_selector("id=cp_master_txt_first_name__add")
-
-    vericol_session.fill("id=cp_master_txt_first_name__add", "tester1first")
-    vericol_session.fill("id=cp_master_txt_last_name__add", "tester1Last")
-    vericol_session.fill("id=cp_master_txt_employee_job_title__add", "CoolTitle")
-    vericol_session.click("id=cp_master_lbtn_save__add")
-
+    print("TESTERPEEPS")
+    print(peeps)
