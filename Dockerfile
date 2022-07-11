@@ -11,7 +11,7 @@ RUN pip3 install pytest-repeat
 RUN pip3 install Faker
 
 ENV USERNAME=john.raymond
-ENV PW=]Access98765#
+ENV PW=vericol1
 ENV PYTEST_BASE_URL=https:\\demo.vericol.com
 ENV chrometrace=YES
 
