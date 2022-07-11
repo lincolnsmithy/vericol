@@ -15,7 +15,9 @@ ENV PW=vericol1
 ENV PYTEST_BASE_URL=https://demo.vericol.com/
 ENV chrometrace=YES
 
-CMD pytest vericobvt.py --count=1 --html=tester2report.html
+CMD "echo TESTER"
+
+#CMD vericol\pytest vericobvt.py --count=1 --html=tester2report.html
 #RUN echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' >> /etc/apt/sources.list
 #RUN apt-get install wget
 #RUN wget https://dl.google.com/linux/linux_signing_key.pub
