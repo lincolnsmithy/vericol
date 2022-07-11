@@ -12,7 +12,7 @@ RUN pip3 install Faker
 
 ENV USERNAME=john.raymond
 ENV PW=vericol1
-ENV PYTEST_BASE_URL=https:\\demo.vericol.com
+ENV PYTEST_BASE_URL=https:\\demo.vericol.com\
 ENV chrometrace=YES
 
 #RUN echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' >> /etc/apt/sources.list
