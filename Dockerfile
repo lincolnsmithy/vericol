@@ -15,7 +15,7 @@ ENV PW=vericol1
 ENV PYTEST_BASE_URL=https://demo.vericol.com/
 ENV chrometrace=YES
 
-CMD ["bash", "pytest"]
+#CMD ["bash", "pytest"]
 
 #CMD vericol\pytest vericobvt.py --count=1 --html=tester2report.html
 #RUN echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' >> /etc/apt/sources.list
