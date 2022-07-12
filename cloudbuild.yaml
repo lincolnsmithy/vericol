@@ -6,5 +6,5 @@ images:
 
 artifacts:
   objects:
-    location: 'gs://playwright-repdddorts/test/'
-    paths: ['testreport.html']
+    location: 'gs://playwright-reports/test/'
+    paths: ['*.*']
