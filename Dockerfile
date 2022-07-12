@@ -18,7 +18,8 @@ ENV chrometrace=YES
 
 RUN pytest /vericol/vericobvt.py --count=1 --html=/vericol/testreport.html
 RUN pwd
-RUN ls -la /vericol
+RUN cd /vericol
+RUN ls -la
 #CMD vericol\pytest vericobvt.py --count=1 --html=tester2report.html
 #RUN echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' >> /etc/apt/sources.list
 #RUN apt-get install wget
