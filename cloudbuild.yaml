@@ -1,6 +1,12 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'build', '-t', 'us-west2-docker.pkg.dev/$PROJECT_ID/verisol/test:tag1', '.' ]
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'run', '--name', 'containername', 'gcr.io/$PROJECT_ID/verisol/test']
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'cp', 'containername:/verisol/testreport.html, './testreport.html']
+
 images:
 - 'us-west2-docker.pkg.dev/$PROJECT_ID/verisol/test:tag1'
 
