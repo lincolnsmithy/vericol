@@ -16,7 +16,7 @@ ENV PYTEST_BASE_URL=https://demo.vericol.com/
 ENV chrometrace=YES
 
 
-RUN pytest /vericol/vericobvt.py --count=1 --html=testreport.html
+RUN pytest /vericol/vericobvt.py --count=1 --html=/vericol/testreport.html
 RUN pwd
 
 RUN ls -la /vericol
