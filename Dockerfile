@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/playwright/python:v1.22.0-focal
+FROM mcr.microsoft.com/playwright/python:v1.23.0-focal
 
 #FROM python:3.8.7
 
