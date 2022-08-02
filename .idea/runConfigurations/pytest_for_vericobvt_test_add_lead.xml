@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="pytest for vericobvt.test_add_person" type="tests" factoryName="py.test">
+  <configuration default="false" name="pytest for vericobvt.test_add_lead" type="tests" factoryName="py.test">
     <module name="vericol" />
     <option name="INTERPRETER_OPTIONS" value="" />
     <option name="PARENT_ENVS" value="true" />
@@ -16,7 +16,7 @@
     <option name="_new_keywords" value="&quot;&quot;" />
     <option name="_new_parameters" value="&quot;&quot;" />
     <option name="_new_additionalArguments" value="&quot;--count\u003d1 --html\u003dtestreport.html&quot;" />
-    <option name="_new_target" value="&quot;vericobvt&quot;" />
+    <option name="_new_target" value="&quot;vericobvt.test_add_lead&quot;" />
     <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     <method v="2" />
   </configuration>

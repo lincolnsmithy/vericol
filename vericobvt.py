@@ -3,6 +3,7 @@
 
 from playwright.sync_api import sync_playwright
 from models.add_user import AddUser
+from models.excelprocess import AddLead
 import pytest
 import os
 import json
@@ -40,7 +41,7 @@ def vericol_session():
     #browser_type = p.firefox
     #browser_type = p.webkit
 
-    browser = browser_type.launch(headless=True,devtools=False)
+    browser = browser_type.launch(headless=False,devtools=False)
     # browser.start_tracing(path='/Users/i857921/trace.json')
     #
     #browser = browser.new_context(record_har_path='/Users/i857921/har')
@@ -120,6 +121,12 @@ def test_add_person(vericol_session):
 
     add_user.add_new_user()
 
+def test_add_lead(vericol_session):
+    '''Add Lead'''
+
+    add_lead = AddLead(vericol_session)
+    add_lead.navigate()
+    add_lead.loadfromxl()
 
 
 def test_workforce_report(vericol_session):
@@ -138,13 +145,13 @@ def test_workforce_lead(vericol_session):
 
     assert vericol_session.wait_for_selector("id=cp_master_srt_lead_phase__code_value_lbl_sort_label")
 
-def test_workforce_people_list(vericol_session):
-    """Simple Workforce People Screen Rendered Test"""
+#def test_workforce_people_list(vericol_session):
+ #   """Simple Workforce People Screen Rendered Test"""
 
-    vericol_session.goto(testenv + "workforce/people")
-    vericol_session.wait_for_load_state('domcontentloaded')
-    assert vericol_session.wait_for_selector("id=cp_master_srt_employee_id_lbl_sort_label")
-    peeps = vericol_session.locator("tbody")
+#    vericol_session.goto(testenv + "workforce/people")
+#    vericol_session.wait_for_load_state('domcontentloaded')
+#    assert vericol_session.wait_for_selector("id=cp_master_srt_employee_id_lbl_sort_label")
+#    peeps = vericol_session.locator("tbody")
 
-    print("TESTERPEEPS")
-    print(peeps)
+#    print("TESTERPEEPS")
+#    print(peeps)
