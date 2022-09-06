@@ -39,7 +39,7 @@ def vericol_session():
     #browser_type = p.firefox
     #browser_type = p.webkit
 
-    browser = browser_type.launch(headless=False,devtools=False)
+    browser = browser_type.launch(headless=True,devtools=False)
     # browser.start_tracing(path='/Users/i857921/trace.json')
     #
     #browser = browser.new_context(record_har_path='/Users/i857921/har')
