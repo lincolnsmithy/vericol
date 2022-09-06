@@ -119,12 +119,12 @@ def test_add_person(vericol_session):
 
     add_user.add_new_user()
 
-#def test_add_lead(vericol_session):
-#    '''Add Lead'''
+def test_add_lead(vericol_session):
+    '''Add Lead'''
 
-#    add_lead = AddLead(vericol_session)
-#    add_lead.navigate()
-#    add_lead.loadfromxl()
+    add_lead = AddLead(vericol_session)
+    add_lead.navigate()
+    add_lead.loadfromxl()
 
 
 def test_workforce_report(vericol_session):

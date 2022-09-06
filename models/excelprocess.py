@@ -15,7 +15,7 @@ class AddLead:
 
         print('BASEURL: ' + self.base_url)
 
-        data = pd.read_excel('samplevericol.xlsx')
+        data = pd.read_excel('/vericol/samplevericol.xlsx')
 
         self.testdict = data.to_dict()
 
