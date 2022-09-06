@@ -22,10 +22,9 @@ ENV chrometrace=NO
 
 RUN pytest /vericol/vericobvt.py --count=1 --html=/vericol/testreport.html
 RUN pwd
-RUN ls -la /vericol
-RUN ls -la /
+RUN ls -la /root
 
-RUN cat /vericol/testreport.html
+
 
 
 
