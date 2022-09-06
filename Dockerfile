@@ -3,8 +3,8 @@ FROM mcr.microsoft.com/playwright/python:v1.23.0-focal
 #FROM python:3.8.7
 
 #WORKDIR /root
-
-RUN pip3 -V
+RUN pip install --upgrade pip
+RUN pip -V
 
 RUN git clone https://github.com/lincolnsmithy/vericol.git
 
