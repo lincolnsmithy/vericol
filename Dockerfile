@@ -8,9 +8,10 @@ RUN pip3 -V
 
 RUN groupadd -r python && useradd --no-log-init -r -g python python
 
-USER python
+
 
 RUN git clone https://github.com/lincolnsmithy/vericol.git
+USER python
 RUN pip3 install pytest
 RUN pip3 install pytest-html
 RUN pip3 install pytest-repeat
