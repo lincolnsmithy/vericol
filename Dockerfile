@@ -6,9 +6,7 @@ FROM mcr.microsoft.com/playwright/python:v1.23.0-focal
 
 RUN pip3 -V
 
-RUN adduser -D myuser
-USER myuser
-WORKDIR /home/myuser
+useradd --no-log-init -r -g python python
 
 RUN git clone https://github.com/lincolnsmithy/vericol.git
 RUN pip3 install pytest
