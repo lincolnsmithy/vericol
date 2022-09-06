@@ -13,7 +13,7 @@ RUN pip install pytest-html
 RUN pip install pytest-repeat
 RUN pip install Faker
 RUN pip install pandas
-
+RUN pip install openpyxl
 ENV USERNAME=john.raymond
 ENV PW=vericol1
 ENV PYTEST_BASE_URL=https://demo.vericol.com/
