@@ -26,8 +26,6 @@ def log_response(response):
     respheader = response.headers
     print(respheader)
 
-
-
 #Login Fixture - gets login/session for rest of the tests
 @pytest.fixture(scope='module')
 
