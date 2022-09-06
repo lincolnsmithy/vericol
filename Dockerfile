@@ -9,6 +9,7 @@ RUN pip3 install pytest
 RUN pip3 install pytest-html
 RUN pip3 install pytest-repeat
 RUN pip3 install Faker
+RUN pip3 install pandas
 
 ENV USERNAME=john.raymond
 ENV PW=vericol1
