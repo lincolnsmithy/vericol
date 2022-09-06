@@ -14,7 +14,7 @@ RUN pip3 install pandas
 ENV USERNAME=john.raymond
 ENV PW=vericol1
 ENV PYTEST_BASE_URL=https://demo.vericol.com/
-ENV chrometrace=YES
+ENV chrometrace=NO
 
 
 RUN pytest /vericol/vericobvt.py --count=1 --html=/vericol/testreport.html
