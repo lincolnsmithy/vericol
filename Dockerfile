@@ -4,6 +4,9 @@ FROM mcr.microsoft.com/playwright/python:v1.23.0-focal
 
 #WORKDIR /root
 
+RUN pip3 -V
+ENV PIP_ROOT_USER_ACTION=ignore
+
 RUN git clone https://github.com/lincolnsmithy/vericol.git
 RUN pip3 install pytest
 RUN pip3 install pytest-html
