@@ -1,19 +1,12 @@
-steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'us-west2-docker.pkg.dev/$PROJECT_ID/verisol/test:tag1', '.' ]
+#steps:
+#- name: 'gcr.io/cloud-builders/docker'
+#  args: [ 'build', '-t', 'us-west2-docker.pkg.dev/$PROJECT_ID/verisol/test:tag1', '.' ]
 
-- name: 'gcr.io/cloud-builders/docker'
-  id: Test
-  entrypoint: '/bin/sh'
-  args:
-    - -c
-    - 'python -V'
-
-images:
-- 'us-west2-docker.pkg.dev/$PROJECT_ID/verisol/test:tag1'
+#images:
+#- 'us-west2-docker.pkg.dev/$PROJECT_ID/verisol/test:tag1'
 
 
-artifacts:
-  objects:
-    location: 'gs://playwright-reports/test/'
-    paths: ['*.*']
+#artifacts:
+#  objects:
+#    location: 'gs://playwright-reports/test/'
+#    paths: ['*.*']
