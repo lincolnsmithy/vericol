@@ -1,9 +1,8 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'us-west2-docker.pkg.dev/$PROJECT_ID/verisol/test:tag1', '.' ]
+  args: [ 'build', '-t', 'us-west2-docker.pkg.dev/$PROJECT_ID/verisol/test:tag1', '.'  && 'RUN pytest /vericol/vericobvt.py --count=1 --html=/var/log/testreport.html']
 
-- name: 'bash'
-  args: ['pytest /vericol/vericobvt.py --count=1 --html=/var/log/testreport.html']
+
 images:
 - 'us-west2-docker.pkg.dev/$PROJECT_ID/verisol/test:tag1'
 
