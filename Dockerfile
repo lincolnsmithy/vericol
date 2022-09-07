@@ -24,7 +24,6 @@ RUN pytest /vericol/vericobvt.py --count=1 --html=/vericol/testreport.html
 RUN pwd
 RUN ls -la
 RUN ls -la /vericol
-RUN gsutil cp /vericol/testreport.html gs://playwright-reports/test/
 
 
 
