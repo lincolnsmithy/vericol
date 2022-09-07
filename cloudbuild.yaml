@@ -7,7 +7,7 @@ steps:
   entrypoint: '/bin/sh'
   args:
     - -c
-    - 'pytest'
+    - 'python -V'
 
 images:
 - 'us-west2-docker.pkg.dev/$PROJECT_ID/verisol/test:tag1'
