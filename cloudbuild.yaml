@@ -5,7 +5,3 @@ steps:
 images:
 - 'us-west2-docker.pkg.dev/$PROJECT_ID/verisol/test:tag1'
 
-artifacts:
-  objects:
-    location: 'gs://playwright-reports/test/'
-    paths: ['*.html']
