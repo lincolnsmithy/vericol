@@ -2,7 +2,6 @@ FROM mcr.microsoft.com/playwright/python:v1.23.0-focal
 
 #FROM python:3.8.7
 
-#WORKDIR /root
 RUN pip install --upgrade pip
 RUN pip -V
 
