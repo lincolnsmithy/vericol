@@ -16,7 +16,7 @@ COPY --from=0 /gcp-get-secret /usr/local/bin/
 #RUN pip install Faker
 #RUN pip install pandas
 #RUN pip install openpyxl
-#ENV USERNAME=me
+ENV USERNAME=me
 ENV PGPASSWORD=gcp:///projects/180640329096/secrets/user_pass?default=postgres
 #ENV PYTEST_BASE_URL=me
 #ENV chrometrace=NO
