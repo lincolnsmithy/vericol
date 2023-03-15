@@ -10,12 +10,12 @@ RUN pip -V
 
 RUN git clone https://github.com/lincolnsmithy/vericol.git
 
-RUN pip install --root-user-action=ignore pytest
-RUN pip install pytest-html
-RUN pip install pytest-repeat 
-RUN pip install Faker
-RUN pip install pandas
-RUN pip install openpyxl
+#RUN pip install --root-user-action=ignore pytest
+#RUN pip install pytest-html
+#RUN pip install pytest-repeat 
+#RUN pip install Faker
+#RUN pip install pandas
+#RUN pip install openpyxl
 ENV USERNAME=me
 ENV PGPASSWORD=gcp:///projects/180640329096/secrets/user_pass?default=postgres
 ENV PYTEST_BASE_URL=me
