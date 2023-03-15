@@ -8,7 +8,7 @@ COPY --from=0 /gcp-get-secret /usr/local/bin/
 #RUN pip install --upgrade pip
 #RUN pip -V
 
-RUN git clone https://github.com/lincolnsmithy/vericol.git
+#RUN git clone https://github.com/lincolnsmithy/vericol.git
 
 #RUN pip install --root-user-action=ignore pytest
 #RUN pip install pytest-html
