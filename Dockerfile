@@ -3,6 +3,11 @@ FROM binxio/gcp-get-secret:0.4.1
 FROM alpine:3.6
 #FROM python:3.8.7
 
+FROM binxio/gcp-get-secret:0.4.1
+
+
+
+
 COPY --from=0 /gcp-get-secret /usr/local/bin/
 
 #RUN pip install --upgrade pip
@@ -17,14 +22,14 @@ COPY --from=0 /gcp-get-secret /usr/local/bin/
 #RUN pip install pandas
 #RUN pip install openpyxl
 ENV USERNAME=me
-ENV PGPASSWORD=gcp://projects/180640329096/secrets/user_pass?default=postgres
+ENV PGPASSWORD=gcp:///projects/180640329096/secrets/user_pass?default=postgres
 #ENV PYTEST_BASE_URL=me
 #ENV chrometrace=NO
 
 ENTRYPOINT [ "/usr/local/bin/gcp-get-secret", "--use-default-credentials"]
-CMD [ "/bin/bash", "-c", "echo $PGPASSWORD"]
-RUN echo $PGPASSWORD
-RUN echo $USERNAME
+RUN [ "/bin/bash", "-c", "echo $PGPASSWORD"]
+#RUN echo $PGPASSWORD
+#RUN echo $USERNAME
 #RUN pytest -v /vericol/vericobvt.py --count=1 --html=/vericol/testreport.html
 
 
