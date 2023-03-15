@@ -1,5 +1,5 @@
 FROM binxio/gcp-get-secret:0.4.1
-FROM mcr.microsoft.com/playwright/python:v1.23.0-focal
+#FROM mcr.microsoft.com/playwright/python:v1.23.0-focal
 
 #FROM python:3.8.7
 
