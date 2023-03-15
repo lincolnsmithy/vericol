@@ -15,11 +15,12 @@ RUN pip install pytest-repeat
 RUN pip install Faker
 RUN pip install pandas
 RUN pip install openpyxl
-ENV USERNAME=
+ENV USERNAME=me
 ENV PW=gcp:///projects/180640329096/secrets/user_pass
-ENV PYTEST_BASE_URL
+ENV PYTEST_BASE_URL=me
 ENV chrometrace=NO
 
+RUN echo $PW
 #RUN pytest -v /vericol/vericobvt.py --count=1 --html=/vericol/testreport.html
 
 
