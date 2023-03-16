@@ -5,7 +5,7 @@ steps:
 
 availableSecrets:
   secretManager:
-  - versionName: projects/180640329096/secrets/user_pass
+  - versionName: projects/$PROJECT_ID/secrets/user_pass
     env: 'MYSECRET'
 
 images:
