@@ -29,7 +29,7 @@ ENV PGPASSWORD=gcp:///projects/180640329096/secrets/user_pass?default=postgres
 ENTRYPOINT [ "/usr/local/bin/gcp-get-secret", "--use-default-credentials"]
 CMD [ "/bin/bash", "-c", "echo PGPASSWORD"]
 #RUN echo $PGPASSWORD
-#RUN echo $USERNAME
+RUN echo $MYSECRET
 #RUN pytest -v /vericol/vericobvt.py --count=1 --html=/vericol/testreport.html
 
 
