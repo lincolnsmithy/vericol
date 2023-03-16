@@ -5,10 +5,8 @@ steps:
 
 availableSecrets:
   secretManager:
-  - versionName: projects/$PROJECT_ID/secrets/user_pass
+  - versionName: projects/180640329096/secrets/user_pass
     env: 'MYSECRET'
 
 images:
 - 'us-west2-docker.pkg.dev/$PROJECT_ID/verisol/test:tag1'
-
-
