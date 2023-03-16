@@ -29,6 +29,7 @@ ENV PGPASSWORD=gcp:///projects/180640329096/secrets/user_pass/version/1
 ENTRYPOINT [ "/usr/local/bin/gcp-get-secret", "--use-default-credentials"]
 CMD [ "/bin/bash", "-c", "echo $PGPASSWORD"]
 CMD echo $PGPASSWORD
+CMD echo FUCKOFF
 #RUN echo $MYSECRET
 #RUN pytest -v /vericol/vericobvt.py --count=1 --html=/vericol/testreport.html
 
